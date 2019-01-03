@@ -530,3 +530,24 @@ compañera:
 * [ ] UI: Muestra lista y/o tabla con datos y/o indicadores.
 * [ ] UI: Permite ordenar data por uno o más campos (asc y desc).
 * [ ] UI: Permite filtrar data en base a una condición.
+
+Historia de Usuarios:
+
+Se crea una página web donde se muestra a los usuarios de LOL, una red de datos que les permite de una forma más organizada poder evaluar las características de los personajes del videojuego antes de cada competencia.
+
+1.Como usuario de LOL, quiero poder filtrar a los personajes según sus categorías.
+2.Como usuario de LOL quiero, poder tener información de cada personaje al seleccionarlos.
+3.Como usuario de  LOL quiero, poder ver la cantidad de personajes que hay por categorías.
+4.Como usuario de LOL quiero, ordenar a los personajes por orden alfabético.
+5.Como usuario de LOL quiero, tener información general sobre el juego.
+
+Para cubrir con las necesidades de los usuarios, se crearon 4 partes importantes en la página:
+
+1.- Personajes: Se muestran las diferentes categorías de los personajes, con las cuales el usuario podrá filtrar la información según sus requerimientos, y tendrá a su disposición una ficha con la información mas importante de cada uno de ellos para prepararse para su próxima  partida.
+
+2.- Ordenar por: Le damos la posibilidad a los usuarios de ordenar la información filtrada por orden alfabético de la A a la Z y de forma contraria, de esta manera se podrá llevar un oden y organización de la información, facilitando al usuario su búsqueda.
+
+3.- Estadísticas: En esta sección se encontrarán estadísticas sobre que cantidad de personajes hay en cada categoría ( Luchador, Magos,Tanques, Asesinos, Apoyo, Combatientes).
+
+4.- Más información: Esta sección está hecha pensando en darle más posibilidades al usuario de tener más información general sobre el juego, así podrá complementar sus conocimientos y mejorar más en sus partidas.
+
