@@ -13,6 +13,7 @@ body {
 
 .logo {
     width: 25%;
+    margin-left: 15.5px;
   }
 .menu {
     font-family: 'Yatra One', cursive;
@@ -24,7 +25,10 @@ body {
     font-size: 20px;
     color: #EEDA8F !important;
     background-color: #343A40 !important;
+s}
 
+#lista {
+font-size: 10.5px;
 }
 
 
