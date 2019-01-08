@@ -8,12 +8,14 @@ body {
 }
 
 .tarjeta {
-    margin: 3%
+    margin: 3%;
+    width: 100%;
+    height: 90%;
 }
 
 .logo {
     width: 25%;
-    margin-left: 15.5px;
+    margin-left: 9px;
   }
 .menu {
     font-family: 'Yatra One', cursive;
@@ -30,7 +32,31 @@ s}
 #lista {
 font-size: 10.5px;
 }
+.actual{
+    border-bottom: 2px solid;
+    border-color: #c79a3c !important;
+    color: white !important;
+}
 
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 2%; /* Place the button at the bottom of the page */
+    right: 1%; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #d7b643; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 1.5%; /* Some padding */
+    border-radius: 25%; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  
+  #myBtn:hover {
+    background-color: #b38f13; /* Add a dark-grey background on hover */
+  }
 
 
 
