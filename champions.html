@@ -18,6 +18,7 @@
 </head>
 
 <body>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
   <header>
     <div class="row">
       <div class="col-sm-12">
@@ -43,11 +44,10 @@
 
             </ul>
             <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link menu" href="champions.html">Personajes</a>
+              <li class="nav-item active">
+                <a class="nav-link menu actual" href="champions.html">Champions</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link menu" href="#">Estadísticas</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link menu" target="_blank" href="https://las.leagueoflegends.com/es/">Información</a>
@@ -69,12 +69,24 @@
                 Clases
               </a>
               <div class="dropdown-menu dark bg-dark" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item menu" href="#">Tanques</a>
-                <a class="dropdown-item menu" href="champions.html">Magos</a>
-                <a class="dropdown-item menu" href="#">Apoyo</a>
-                <a class="dropdown-item menu" href="#">Tiradores</a>
-                <a class="dropdown-item menu" href="#">Asesinos</a>
-                <a class="dropdown-item menu" href="#">Guerreros</a>
+                <a class="dropdown-item menu" id="all" href="#">Todos</a>
+                <a class="dropdown-item menu" id="tank" href="#">Tanques</a>
+                <a class="dropdown-item menu" id="mage" href="champions.html">Magos</a>
+                <a class="dropdown-item menu" id="support" href="#">Apoyo</a>
+                <a class="dropdown-item menu" id="marksman" href="#">Tiradores</a>
+                <a class="dropdown-item menu" id="assassin" href="#">Asesinos</a>
+                <a class="dropdown-item menu" id="fighter" href="#">Guerreros</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle menu" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Ordenar
+              </a>
+              <div id="navbarNavDropdown2" class="dropdown-menu dark bg-dark" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item menu" id="az" href="#">A-Z</a>
+                <a class="dropdown-item menu" id="za" href="#">Z-A</a>
+
               </div>
             </li>
           </ul>
@@ -91,23 +103,39 @@
             </li>
           </ul>
           <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle menu" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Ordenar
-              </a>
-              <div id="navbarNavDropdown2" class="dropdown-menu dark bg-dark" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item menu" href="#">A-Z</a>
-                <a class="dropdown-item menu" href="#">Z-A</a>
-
-              </div>
-            </li>
           </ul>
     </div>
     </nav>
     </section>
 
   </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <section>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark menu">
+          <ul class="navbar-nav mr-auto">
+          </ul>
+
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link menu" href="#" id="categoria">Champions</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link menu" href="#"></a>
+            </li>
+          </ul>
+    </div>
+    </nav>
+    </section>
+
   </div>
 
 
@@ -116,7 +144,7 @@
 
   </div>
 
-  
+
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
