@@ -22,6 +22,46 @@ Cuarta Pantalla:
 
 <a href="https://ibb.co/qDNGfMt"><img src="https://i.ibb.co/10rV5fD/4.jpg" alt="4" border="0"></a>
 
+## Prototipo de Alta Fidelidad (desktop):
+
+Pantalla 1:
+
+<a href="https://ibb.co/WV2DZzP"><img src="https://i.ibb.co/mNcvkyX/Pantalla1-compu.jpg" alt="Pantalla1-compu" border="0"></a>
+
+Al hacer click en Personajes:
+
+<a href="https://ibb.co/zfNNGxC"><img src="https://i.ibb.co/3hkkBdV/Pantalla-2.jpg" alt="Pantalla-2" border="0"></a><br /><a target='_blank' href='https://poetandpoem.com/interpretation-of-no-man-is-an-island'>meaning of no man is an island poem</a><br />
+
+Pantalla 2:
+
+<a href="https://ibb.co/hMp04mh"><img src="https://i.ibb.co/cvzqZrM/Pantalla-3-compu.jpg" alt="Pantalla-3-compu" border="0"></a>
+
+Al hacer click en ordenar:
+
+<a href="https://ibb.co/pJnYrZz"><img src="https://i.ibb.co/nzRx8fc/Pantalla-4.jpg" alt="Pantalla-4" border="0"></a><br /><a target='_blank' href='https://movieplotholes.com/scream-4'>scream 4 jenny</a><br />
+
+Pantalla 3 (al hacer click en algún personaje):
+
+<a href="https://ibb.co/Dg6S8dw"><img src="https://i.ibb.co/jZx1Wt3/Pantalla-5-compu.jpg" alt="Pantalla-5-compu" border="0"></a>
+
+
+## Prototipo de Alta Fidelidad (celualres y tablets):
+
+Pantalla 1:
+
+<a href="https://ibb.co/KxpHS4j"><img src="https://i.ibb.co/Sw4pGYX/pantalla-1-cel.jpg" alt="pantalla-1-cel" border="0"></a>
+
+Pantalla 2:
+
+<a href="https://ibb.co/0h0bw41"><img src="https://i.ibb.co/t80rdjn/Pantalla-2-cel.jpg" alt="Pantalla-2-cel" border="0"></a><br /><a target='_blank' href='https://babynamesetc.com/odd-baby-names'>odd baby names</a><br />
+
+Pantalla 3:
+
+<a href="https://ibb.co/S3ndwnG"><img src="https://i.ibb.co/rw6c26N/Pantalla-3-cel.jpg" alt="Pantalla-3-cel" border="0"></a>
+
+Pantalla 4:
+
+<a href="https://ibb.co/gdh6vwD"><img src="https://i.ibb.co/2SH58Pj/pantalla-4-cel.jpg" alt="pantalla-4-cel" border="0"></a>
 
 ## Historia de Usuarios:
 
@@ -58,4 +98,11 @@ Los cambios que se hicieron fueron:
 5. Incrementamos un botón llamado "Top", que le permite al usuario volver a subir una vez que haya empezado a hacer scroll, de esta manera le ahorramos tiempo y le damos la opción de volver rápido al principio de esa búsqueda en específico.
 
 
+## Prototipo final:
 
+https://www.figma.com/file/Vqg9MuuHOmS9EB8ZerW1L7eZ/Untitled?node-id=0%3A1
+
+
+## Planificación:
+
+https://trello.com/b/Y3SwnDRH/league-of-legends-challenger
