@@ -10,3 +10,10 @@ describe('example', () => {
     expect(example()).toBe('example');
   });
 });
+
+// describe('checkClass', () =>{
+//   it('Regresa false cuando no es mago', () =>{
+//     assert.equal(checkClass(["Fighter", "Mage"], "Mage"), true);
+
+//   });
+// });
