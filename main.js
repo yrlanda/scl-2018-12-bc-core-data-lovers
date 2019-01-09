@@ -46,14 +46,14 @@ window.onload = () => {
     document.getElementById('mage').addEventListener('click', (evento) => {
         evento.preventDefault();
         clear_grid();
-        document.getElementById('categoria').textContent = "Mago";
+        document.getElementById('categoria').textContent = "Magos";
         let filtered_list = window.filter(list, "Mage");
         draw_champions(filtered_list);
     });
 
     document.getElementById('tank').addEventListener('click', (evento) => {
         evento.preventDefault();
-        document.getElementById('categoria').textContent = "Tanque";
+        document.getElementById('categoria').textContent = "Tanques";
         clear_grid();
         let filtered_list = window.filter(list, "Tank");
         draw_champions(filtered_list);
@@ -61,28 +61,28 @@ window.onload = () => {
     document.getElementById('support').addEventListener('click', (evento) => {
         evento.preventDefault();
         clear_grid();
-        document.getElementById('categoria').textContent = "Apoyo";
+        document.getElementById('categoria').textContent = "Apoyos";
         let filtered_list = window.filter(list, "Support");
         draw_champions(filtered_list);
     });
     document.getElementById('marksman').addEventListener('click', (evento) => {
         evento.preventDefault();
         clear_grid();
-        document.getElementById('categoria').textContent = "Tirador";
+        document.getElementById('categoria').textContent = "Tiradores";
         let filtered_list = window.filter(list, "Marksman");
         draw_champions(filtered_list);
     });
     document.getElementById('assassin').addEventListener('click', (evento) => {
         evento.preventDefault();
         clear_grid();
-        document.getElementById('categoria').textContent = "Asesino";
+        document.getElementById('categoria').textContent = "Asesinos";
         let filtered_list = window.filter(list, "Assassin");
         draw_champions(filtered_list);
     });
     document.getElementById('fighter').addEventListener('click', (evento) => {
         evento.preventDefault();
         clear_grid();
-        document.getElementById('categoria').textContent = "Guerrero";
+        document.getElementById('categoria').textContent = "Guerreros";
         let filtered_list = window.filter(list, "Fighter");
         draw_champions(filtered_list);
     });
