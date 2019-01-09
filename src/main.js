@@ -15,9 +15,8 @@ function topFunction() {
 }
 
 window.onload = () => {
-    let list = ordenar(LOL.data, 1);
+    let list = window.ordenar(LOL.data, 1);
     draw_champions(list);
-    filter(list, "Mage");
 
     document.getElementById('az').addEventListener('click', (evento) => {
         evento.preventDefault();
@@ -44,7 +43,7 @@ window.onload = () => {
         evento.preventDefault();
         clear_grid();
         document.getElementById('categoria').textContent = "Mago";
-        let filtered_list = filter(list, "Mage");
+        let filtered_list = window.filter(list, "Mage");
         draw_champions(filtered_list);
     });
 
@@ -87,52 +86,18 @@ window.onload = () => {
 
 
     function clear_grid() {
-        var myNode = document.getElementById('lista');
+        let myNode = document.getElementById('lista');
         while (myNode.firstChild) {
             myNode.removeChild(myNode.firstChild);
         }
     }
 
-    function ordenar(data, sort) {
-        const ordered = {};
-
-        if (sort == 1) {
-            Object.keys(data).sort().forEach(function (key) {
-                ordered[key] = data[key];
-            });
-        } else {
-            Object.keys(data).sort().reverse().forEach(function (key) {
-                ordered[key] = data[key];
-            });
-        }
-        return ordered
-
-    }
-
-    function checkClass(arr, val) {
-        return arr.some(function (arrVal) {
-            return val === arrVal;
-        });
-    }
-
-    function filter(data, filt) {
-        const filtered = {};
-
-        Object.keys(data).sort().forEach(function (key) {
-
-            if (checkClass(data[key].tags, filt)) {
-                filtered[key] = data[key];
-            }
-        });
-        return filtered
-    }
+    
 
     function draw_champions(list) {
         const lista = document.getElementById('lista')
         let i = 0;
-        console.log(typeof (list));
-
-        for (var champ in list) {
+        for (let champ in list) {   
             if (i % 5 === 0) {
                 if (i > 0) {
                     lista.appendChild(row);
@@ -150,7 +115,7 @@ window.onload = () => {
     }
 
     function pintar_fila() {
-        var row = document.createElement('div');
+        let row = document.createElement('div');
         row.className = 'row justify-content-start';
         return row;
     }
@@ -159,24 +124,24 @@ window.onload = () => {
 
         // console.log(champion.name);
 
-        var div = document.createElement('div');
+        let div = document.createElement('div');
         div.className = 'col-sm-2 offset-sm-1';
 
-        var card = document.createElement('div');
+        let card = document.createElement('div');
         card.className = 'card text-center tarjeta';
 
-        var card_img = document.createElement('img');
+        let card_img = document.createElement('img');
         card_img.className = 'card-img-top';
         card_img.src = champion.splash
 
-        var card_body = document.createElement('div');
+        let card_body = document.createElement('div');
         card_body.className = 'card-body';
 
-        var card_title = document.createElement('h5');
+        let card_title = document.createElement('h5');
         card_title.className = 'card-title';
         card_title.textContent = champion.name;
 
-        var card_text = document.createElement('p');
+        let card_text = document.createElement('p');
         card_text.className = 'card-text';
         card_text.textContent = champion.title;
 
@@ -192,24 +157,24 @@ window.onload = () => {
     function pintar_caja_estandar(champion, row) {
         // console.log(champion.name);
 
-        var div = document.createElement('div');
+        let div = document.createElement('div');
         div.className = 'col-sm-2';
 
-        var card = document.createElement('div');
+        let card = document.createElement('div');
         card.className = 'card text-center tarjeta';
 
-        var card_img = document.createElement('img');
+        let card_img = document.createElement('img');
         card_img.className = 'card-img-top';
         card_img.src = champion.splash
 
-        var card_body = document.createElement('div');
+        let card_body = document.createElement('div');
         card_body.className = 'card-body';
 
-        var card_title = document.createElement('h5');
+        let card_title = document.createElement('h5');
         card_title.className = 'card-title';
         card_title.textContent = champion.name;
 
-        var card_text = document.createElement('p');
+        let card_text = document.createElement('p');
         card_text.className = 'card-text';
         card_text.textContent = champion.title;
 
