@@ -7,7 +7,8 @@ const example = () => {
 
 window.example = example;
 
-const ordenar = (data, sort) => {
+//Funcion que ordena los datos de la alfabeticamente
+const sortData = (data, sort) => {
   const ordered = {};
 
   if (sort == 1) {
@@ -19,20 +20,23 @@ const ordenar = (data, sort) => {
       ordered[key] = data[key];
     });
   }
-  return ordered
+  return ordered;
 
 }
 
-window.ordenar = ordenar;
+window.sortData = sortData;
 
+//Funcion que verifica que si un personaje posee la clase enviada como parametro(Mago, Guerrero...)
 const checkClass = (arr, val) => {
   return arr.some(function (arrVal) {
     return val === arrVal;
   });
 
 }
+window.checkClass = checkClass;
 
-const filter = (data, filt) => {
+//Funcion que filtra la lista de personasjes por clase
+const filterData = (data, filt) => {
   const filtered = {};
 
   Object.keys(data).sort().forEach(function (key) {
@@ -44,4 +48,4 @@ const filter = (data, filt) => {
   return filtered;
 
 }
-window.filter = filter;
+window.filterData = filterData;
