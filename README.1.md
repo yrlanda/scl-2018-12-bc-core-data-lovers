@@ -1,4 +1,4 @@
-# Read Me:
+# README:
 
 ## Diagrama de Flujo
 
@@ -6,7 +6,7 @@
 
 Se crea una página web donde se muestra a los usuarios de LOL, una red de datos que les permite de una forma más organizada poder evaluar las características de los personajes del videojuego antes de cada competencia.
 
-## Prototipo de baja fidelidad:
+## Prototipo de baja fidelidad (Desktop):
 
 Primera Pantalla:
 
@@ -21,6 +21,25 @@ Segunda y Tercera Pantalla:
 Cuarta Pantalla:
 
 <a href="https://ibb.co/qDNGfMt"><img src="https://i.ibb.co/10rV5fD/4.jpg" alt="4" border="0"></a>
+
+## Prototipo de baja fidelidad(celulares y tablets):
+
+Pantalla 1:
+
+<a href="https://ibb.co/QvsTc5F"><img src="https://i.ibb.co/SwqMxLX/IMG-20190110-151735.jpg" alt="IMG-20190110-151735" border="0"></a><br /><a target='_blank' href='https://aluminumsulfate.net/aluminum-oxide'>chemical symbol for aluminium</a><br />
+
+Pantalla 2:
+
+<a href="https://ibb.co/HPYrcDj"><img src="https://i.ibb.co/bvLr4gk/IMG-20190110-151741.jpg" alt="IMG-20190110-151741" border="0"></a>
+
+Pantalla 3:
+
+<a href="https://ibb.co/KNvR6BR"><img src="https://i.ibb.co/z8vjsCj/IMG-20190110-151757.jpg" alt="IMG-20190110-151757" border="0"></a>
+
+Pantalla 4:
+
+<a href="https://ibb.co/RBDG2tM"><img src="https://i.ibb.co/jWr9hqx/IMG-20190110-151811.jpg" alt="IMG-20190110-151811" border="0"></a>
+
 
 ## Prototipo de Alta Fidelidad (desktop):
 
@@ -66,9 +85,13 @@ Pantalla 4:
 ## Historia de Usuarios:
 
 1.Como usuario de LOL, quiero poder filtrar a los personajes según sus categorías.
+
 2.Como usuario de LOL quiero, poder tener información de cada personaje al seleccionarlos.
+
 3.Como usuario de  LOL quiero, poder ver la cantidad de personajes que hay por categorías.
+
 4.Como usuario de LOL quiero, ordenar a los personajes por orden alfabético.
+
 5.Como usuario de LOL quiero, tener información general sobre el juego.
 
 Para cubrir con las necesidades de los usuarios, se crearon 4 partes importantes en la página:
@@ -87,7 +110,7 @@ Luego de hacer pruebas de usabilidad con los usuarios, notamos que era totalment
 
 Los cambios que se hicieron fueron:
 
-1. Los usuarios comentaron que no era impoortante ni necesario tener las secciones de "Tutoriales" y "Eventos", ya que, ellos preferían tener una páginas más minimalistas y sencilla en la cual se encontrara la información específica que pidieron.
+1. Los usuarios comentaron que no era importante ni necesario tener las secciones de "Tutoriales" y "Eventos", ya que, ellos preferían tener una páginas más minimalistas y sencilla en la cual se encontrara la información específica que pidieron.
 
 2. La sección de "Noticias" que estaba en la pantalla principal fue sustituida por un párrafo que ayuda al usuario a estar en contexto y conocer el objetivo de la página de una forma precisa y concisa. De esta forma se eliminó la sección de "Nosotros" y le ahorramos al usuario la posibilidad de perder tiempo yendo a ventanas que podían plasmarse de manera más eficaz.
 
@@ -104,5 +127,9 @@ https://www.figma.com/file/Vqg9MuuHOmS9EB8ZerW1L7eZ/Untitled?node-id=0%3A1
 
 
 ## Planificación:
+
+Para la planificaicón nos apoyamos en la herramienta trello y en la pizarra kanban que fuimos actualizando según fuera necesario.
+
+<a href="https://ibb.co/NK66V4f"><img src="https://i.ibb.co/5LWWM7C/IMG-20190110-153645.jpg" alt="IMG-20190110-153645" border="0"></a><br /><a target='_blank' href='https://poetandpoem.com/analysis-of-the-definition-of-love-by-andrew-marvell'>the definition of love summary</a><br />
 
 https://trello.com/b/Y3SwnDRH/league-of-legends-challenger

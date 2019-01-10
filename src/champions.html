@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Yatra+One" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="style.css" />
 
 
@@ -143,6 +145,61 @@
 
 
   </div>
+
+  <!-- Large modal -->
+
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg ">
+      <div class="modal-content ">
+        <div class="card mb-3 text-center">
+          <img id="champ_splash" class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zyra_0.jpg"
+            alt="Card image cap ">
+          <div class="card-body">
+            <h3 class="card-title" id="champ_name">Card title</h3>
+            <p class="card-text" id="champ_title"></p>
+            <div class="row rtl text-center garanty">
+              <div class="col box">
+
+              </div>
+              <!--.box-->
+              <div class="col box">
+                <i class="fas fa-fist-raised"> </i>
+                <h5>Attack</h5>
+                <h5 id="champ_attack"></h5>
+              </div>
+              <!--.box-->
+              <div class="col box">
+                <i class="fas fa-shield-alt"> </i>
+                <h5>Defense</h5>
+                <h5 id="champ_defense"></h5>
+              </div>
+              <!--.box-->
+              <div class="col box">
+                <i class="fas fa-hat-wizard"> </i>
+                <h5>Magic</h5>
+                <h5 id="champ_magic"></h5>
+              </div>
+              <!--.box-->
+              <div class="col box">
+                <i class="fas fa-dizzy"></i>
+                <h5>Difficulty</h5>
+                <h5 id="champ_difficulty"></h5>
+              </div>
+              <!--.box-->
+              <div class="col box">
+
+              </div>
+              <!--.box-->
+            </div>
+            <!--.row-->
+            <p class="card-text"><small class="text-muted" id="champ_blurb"></small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 
 
