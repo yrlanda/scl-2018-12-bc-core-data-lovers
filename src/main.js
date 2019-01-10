@@ -1,5 +1,5 @@
 
-
+//Funciones para el boton de volver arriba
 window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
@@ -18,20 +18,20 @@ function topFunction() {
 }
 
 window.onload = () => {
-    let list = window.ordenar(window.LOL.data, 1);
+    let list = window.sortData(window.LOL.data, 1);
     draw_champions(list);
 
     document.getElementById('az').addEventListener('click', (evento) => {
         evento.preventDefault();
         clear_grid();
-        let list = window.ordenar(window.LOL.data, 1);
+        let list = window.sortData(window.LOL.data, 1);
         draw_champions(list);
     });
 
     document.getElementById('za').addEventListener('click', (evento) => {
         evento.preventDefault();
         clear_grid();
-        let list = window.ordenar(window.LOL.data, 2);
+        let list = window.sortData(window.LOL.data, 2);
         draw_champions(list);
     });
 
@@ -39,7 +39,7 @@ window.onload = () => {
         evento.preventDefault();
         clear_grid();
         document.getElementById('categoria').textContent = "Champions";
-        let list = window.ordenar(window.LOL.data, 1);
+        let list = window.sortData(window.LOL.data, 1);
         draw_champions(list);
     });
 
@@ -47,7 +47,7 @@ window.onload = () => {
         evento.preventDefault();
         clear_grid();
         document.getElementById('categoria').textContent = "Mago";
-        let filtered_list = window.filter(list, "Mage");
+        let filtered_list = window.filterData(list, "Mage");
         draw_champions(filtered_list);
     });
 
@@ -55,40 +55,41 @@ window.onload = () => {
         evento.preventDefault();
         document.getElementById('categoria').textContent = "Tanque";
         clear_grid();
-        let filtered_list = window.filter(list, "Tank");
+        let filtered_list = window.filterData(list, "Tank");
         draw_champions(filtered_list);
     });
     document.getElementById('support').addEventListener('click', (evento) => {
         evento.preventDefault();
         clear_grid();
         document.getElementById('categoria').textContent = "Apoyo";
-        let filtered_list = window.filter(list, "Support");
+        let filtered_list = window.filterData(list, "Support");
         draw_champions(filtered_list);
     });
     document.getElementById('marksman').addEventListener('click', (evento) => {
         evento.preventDefault();
         clear_grid();
         document.getElementById('categoria').textContent = "Tirador";
-        let filtered_list = window.filter(list, "Marksman");
+        let filtered_list = window.filterData(list, "Marksman");
         draw_champions(filtered_list);
     });
     document.getElementById('assassin').addEventListener('click', (evento) => {
         evento.preventDefault();
         clear_grid();
         document.getElementById('categoria').textContent = "Asesino";
-        let filtered_list = window.filter(list, "Assassin");
+        let filtered_list = window.filterData(list, "Assassin");
         draw_champions(filtered_list);
     });
     document.getElementById('fighter').addEventListener('click', (evento) => {
         evento.preventDefault();
         clear_grid();
         document.getElementById('categoria').textContent = "Guerrero";
-        let filtered_list = window.filter(list, "Fighter");
+        let filtered_list = window.filterData(list, "Fighter");
         draw_champions(filtered_list);
     });
 
 
 
+    //Funcion que borra las tarjetas de personajes de la pantalla
     function clear_grid() {
         let myNode = document.getElementById('lista');
         while (myNode.firstChild) {
@@ -98,6 +99,8 @@ window.onload = () => {
 
     
 
+    //funcion que recibe como parametro la lista de personaje y dibuja las tarjetas
+    //de todos los personajes de la lista enviada
     function draw_champions(list) {
         const lista = document.getElementById('lista')
         let i = 0;
@@ -117,19 +120,23 @@ window.onload = () => {
 
 
     }
-
+    //funcion que agrega a traves del DOM una fila nueva a la lista
     function pintar_fila() {
         let row = document.createElement('div');
         row.className = 'row justify-content-start';
         return row;
     }
 
+    //Funcion que dibuja la primera tarjeta de cada linea de la lista de personajes
     function pintar_caja_inicial(champion, row) {
 
         // console.log(champion.name);
 
         let div = document.createElement('div');
         div.className = 'col-sm-2 offset-sm-1';
+        div.onclick = function () { champion_profile(champion) }
+        div.setAttribute('data-target', '.bd-example-modal-lg');
+        div.setAttribute('data-toggle', 'modal');
 
         let card = document.createElement('div');
         card.className = 'card text-center tarjeta';
@@ -157,12 +164,25 @@ window.onload = () => {
         div.appendChild(card);
         row.appendChild(div);
     }
+    function champion_profile(champion){
+        document.getElementById('champ_name').innerHTML = champion.name;
+        document.getElementById('champ_splash').src = champion.splash;
+        document.getElementById('champ_title').innerHTML = champion.title;
+        document.getElementById('champ_blurb').innerHTML = champion.blurb;
+        document.getElementById('champ_attack').innerHTML = champion.info.attack;
+        document.getElementById('champ_defense').innerHTML = champion.info.defense;
+        document.getElementById('champ_magic').innerHTML = champion.info.magic;
+        document.getElementById('champ_difficulty').innerHTML = champion.info.difficulty;
+    }
 
+    //Funcion que dibuja las tarjetas de la lista de personajes (excepto la primera de cada fila)
     function pintar_caja_estandar(champion, row) {
-        // console.log(champion.name);
 
         let div = document.createElement('div');
         div.className = 'col-sm-2';
+        div.onclick = function () { champion_profile(champion) }
+        div.setAttribute('data-target', '.bd-example-modal-lg');
+        div.setAttribute('data-toggle', 'modal');
 
         let card = document.createElement('div');
         card.className = 'card text-center tarjeta';
@@ -170,6 +190,8 @@ window.onload = () => {
         let card_img = document.createElement('img');
         card_img.className = 'card-img-top';
         card_img.src = champion.splash
+        card_img.onclick = function () { champion_profile(champion) }
+
 
         let card_body = document.createElement('div');
         card_body.className = 'card-body';
@@ -191,4 +213,7 @@ window.onload = () => {
         row.appendChild(div);
 
     }
+
+    
+    
 }

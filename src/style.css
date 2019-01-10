@@ -1,6 +1,10 @@
 body {
     background-color: #343A40; 
 }
+
+.profile_card{
+    background-color: #343A40; 
+}
 .texto_lol {
     font-family: 'Yatra One', cursive;
     color: #d7b643 !important;
@@ -27,7 +31,7 @@ body {
     font-size: 20px;
     color: #EEDA8F !important;
     background-color: #343A40 !important;
-s}
+}
 
 #lista {
 font-size: 10.5px;
@@ -36,6 +40,12 @@ font-size: 10.5px;
     border-bottom: 2px solid;
     border-color: #c79a3c !important;
     color: white !important;
+}
+
+.garanty i{
+    font-size:2rem;
+    /* color: #e22232; */
+    /* margin-bottom:1.5rem; */
 }
 
 #myBtn {
