@@ -18,74 +18,78 @@ function topFunction() {
 }
 
 window.onload = () => {
-    // let list = window.sortData(window.LOL.data, 1);
-    // draw_champions(list);
+    let list = window.sortData(window.LOL.data, 1);
+    draw_champions(list);
+    let stats = window.computeStats(list);
+    console.log(stats);
+    
 
-    // document.getElementById('az').addEventListener('click', (evento) => {
-    //     evento.preventDefault();
-    //     clear_grid();
-    //     let list = window.sortData(window.LOL.data, 1);
-    //     draw_champions(list);
-    // });
 
-    // document.getElementById('za').addEventListener('click', (evento) => {
-    //     evento.preventDefault();
-    //     clear_grid();
-    //     let list = window.sortData(window.LOL.data, 2);
-    //     draw_champions(list);
-    // });
+    document.getElementById('az').addEventListener('click', (evento) => {
+        evento.preventDefault();
+        clear_grid();
+        let list = window.sortData(window.LOL.data, 1);
+        draw_champions(list);
+    });
 
-    // document.getElementById('all').addEventListener('click', (evento) => {
-    //     evento.preventDefault();
-    //     clear_grid();
-    //     document.getElementById('categoria').textContent = "Champions";
-    //     let list = window.sortData(window.LOL.data, 1);
-    //     draw_champions(list);
-    // });
+    document.getElementById('za').addEventListener('click', (evento) => {
+        evento.preventDefault();
+        clear_grid();
+        let list = window.sortData(window.LOL.data, 2);
+        draw_champions(list);
+    });
 
-    // document.getElementById('mage').addEventListener('click', (evento) => {
-    //     evento.preventDefault();
-    //     clear_grid();
-    //     document.getElementById('categoria').textContent = "Mago";
-    //     let filtered_list = window.filterData(list, "Mage");
-    //     draw_champions(filtered_list);
-    // });
+    document.getElementById('all').addEventListener('click', (evento) => {
+        evento.preventDefault();
+        clear_grid();
+        document.getElementById('categoria').textContent = "Champions";
+        let list = window.sortData(window.LOL.data, 1);
+        draw_champions(list);
+    });
 
-    // document.getElementById('tank').addEventListener('click', (evento) => {
-    //     evento.preventDefault();
-    //     document.getElementById('categoria').textContent = "Tanque";
-    //     clear_grid();
-    //     let filtered_list = window.filterData(list, "Tank");
-    //     draw_champions(filtered_list);
-    // });
-    // document.getElementById('support').addEventListener('click', (evento) => {
-    //     evento.preventDefault();
-    //     clear_grid();
-    //     document.getElementById('categoria').textContent = "Apoyo";
-    //     let filtered_list = window.filterData(list, "Support");
-    //     draw_champions(filtered_list);
-    // });
-    // document.getElementById('marksman').addEventListener('click', (evento) => {
-    //     evento.preventDefault();
-    //     clear_grid();
-    //     document.getElementById('categoria').textContent = "Tirador";
-    //     let filtered_list = window.filterData(list, "Marksman");
-    //     draw_champions(filtered_list);
-    // });
-    // document.getElementById('assassin').addEventListener('click', (evento) => {
-    //     evento.preventDefault();
-    //     clear_grid();
-    //     document.getElementById('categoria').textContent = "Asesino";
-    //     let filtered_list = window.filterData(list, "Assassin");
-    //     draw_champions(filtered_list);
-    // });
-    // document.getElementById('fighter').addEventListener('click', (evento) => {
-    //     evento.preventDefault();
-    //     clear_grid();
-    //     document.getElementById('categoria').textContent = "Guerrero";
-    //     let filtered_list = window.filterData(list, "Fighter");
-    //     draw_champions(filtered_list);
-    // });
+    document.getElementById('mage').addEventListener('click', (evento) => {
+        evento.preventDefault();
+        clear_grid();
+        document.getElementById('categoria').textContent = "Magos";
+        let filtered_list = window.filterData(list, "Mage");
+        draw_champions(filtered_list);
+    });
+
+    document.getElementById('tank').addEventListener('click', (evento) => {
+        evento.preventDefault();
+        document.getElementById('categoria').textContent = "Tanques";
+        clear_grid();
+        let filtered_list = window.filterData(list, "Tank");
+        draw_champions(filtered_list);
+    });
+    document.getElementById('support').addEventListener('click', (evento) => {
+        evento.preventDefault();
+        clear_grid();
+        document.getElementById('categoria').textContent = "Apoyos";
+        let filtered_list = window.filterData(list, "Support");
+        draw_champions(filtered_list);
+    });
+    document.getElementById('marksman').addEventListener('click', (evento) => {
+        evento.preventDefault();
+        clear_grid();
+        document.getElementById('categoria').textContent = "Tiradores";
+        let filtered_list = window.filterData(list, "Marksman");
+        draw_champions(filtered_list);
+    });
+    document.getElementById('assassin').addEventListener('click', (evento) => {
+        evento.preventDefault();
+        clear_grid();
+        document.getElementById('categoria').textContent = "Asesinos";
+        let filtered_list = window.filterData(list, "Assassin");
+        draw_champions(filtered_list);
+    });
+    document.getElementById('fighter').addEventListener('click', (evento) => {
+        evento.preventDefault();
+        clear_grid();
+        document.getElementById('categoria').textContent = "Guerreros";
+        let filtered_list = window.filterData(list, "Fighter");
+        draw_champions(filtered_list);
+    });
 
 
 
