@@ -18,74 +18,74 @@ function topFunction() {
 }
 
 window.onload = () => {
-    let list = window.sortData(window.LOL.data, 1);
-    draw_champions(list);
+    // let list = window.sortData(window.LOL.data, 1);
+    // draw_champions(list);
 
-    document.getElementById('az').addEventListener('click', (evento) => {
-        evento.preventDefault();
-        clear_grid();
-        let list = window.sortData(window.LOL.data, 1);
-        draw_champions(list);
-    });
+    // document.getElementById('az').addEventListener('click', (evento) => {
+    //     evento.preventDefault();
+    //     clear_grid();
+    //     let list = window.sortData(window.LOL.data, 1);
+    //     draw_champions(list);
+    // });
 
-    document.getElementById('za').addEventListener('click', (evento) => {
-        evento.preventDefault();
-        clear_grid();
-        let list = window.sortData(window.LOL.data, 2);
-        draw_champions(list);
-    });
+    // document.getElementById('za').addEventListener('click', (evento) => {
+    //     evento.preventDefault();
+    //     clear_grid();
+    //     let list = window.sortData(window.LOL.data, 2);
+    //     draw_champions(list);
+    // });
 
-    document.getElementById('all').addEventListener('click', (evento) => {
-        evento.preventDefault();
-        clear_grid();
-        document.getElementById('categoria').textContent = "Champions";
-        let list = window.sortData(window.LOL.data, 1);
-        draw_champions(list);
-    });
+    // document.getElementById('all').addEventListener('click', (evento) => {
+    //     evento.preventDefault();
+    //     clear_grid();
+    //     document.getElementById('categoria').textContent = "Champions";
+    //     let list = window.sortData(window.LOL.data, 1);
+    //     draw_champions(list);
+    // });
 
-    document.getElementById('mage').addEventListener('click', (evento) => {
-        evento.preventDefault();
-        clear_grid();
-        document.getElementById('categoria').textContent = "Mago";
-        let filtered_list = window.filterData(list, "Mage");
-        draw_champions(filtered_list);
-    });
+    // document.getElementById('mage').addEventListener('click', (evento) => {
+    //     evento.preventDefault();
+    //     clear_grid();
+    //     document.getElementById('categoria').textContent = "Mago";
+    //     let filtered_list = window.filterData(list, "Mage");
+    //     draw_champions(filtered_list);
+    // });
 
-    document.getElementById('tank').addEventListener('click', (evento) => {
-        evento.preventDefault();
-        document.getElementById('categoria').textContent = "Tanque";
-        clear_grid();
-        let filtered_list = window.filterData(list, "Tank");
-        draw_champions(filtered_list);
-    });
-    document.getElementById('support').addEventListener('click', (evento) => {
-        evento.preventDefault();
-        clear_grid();
-        document.getElementById('categoria').textContent = "Apoyo";
-        let filtered_list = window.filterData(list, "Support");
-        draw_champions(filtered_list);
-    });
-    document.getElementById('marksman').addEventListener('click', (evento) => {
-        evento.preventDefault();
-        clear_grid();
-        document.getElementById('categoria').textContent = "Tirador";
-        let filtered_list = window.filterData(list, "Marksman");
-        draw_champions(filtered_list);
-    });
-    document.getElementById('assassin').addEventListener('click', (evento) => {
-        evento.preventDefault();
-        clear_grid();
-        document.getElementById('categoria').textContent = "Asesino";
-        let filtered_list = window.filterData(list, "Assassin");
-        draw_champions(filtered_list);
-    });
-    document.getElementById('fighter').addEventListener('click', (evento) => {
-        evento.preventDefault();
-        clear_grid();
-        document.getElementById('categoria').textContent = "Guerrero";
-        let filtered_list = window.filterData(list, "Fighter");
-        draw_champions(filtered_list);
-    });
+    // document.getElementById('tank').addEventListener('click', (evento) => {
+    //     evento.preventDefault();
+    //     document.getElementById('categoria').textContent = "Tanque";
+    //     clear_grid();
+    //     let filtered_list = window.filterData(list, "Tank");
+    //     draw_champions(filtered_list);
+    // });
+    // document.getElementById('support').addEventListener('click', (evento) => {
+    //     evento.preventDefault();
+    //     clear_grid();
+    //     document.getElementById('categoria').textContent = "Apoyo";
+    //     let filtered_list = window.filterData(list, "Support");
+    //     draw_champions(filtered_list);
+    // });
+    // document.getElementById('marksman').addEventListener('click', (evento) => {
+    //     evento.preventDefault();
+    //     clear_grid();
+    //     document.getElementById('categoria').textContent = "Tirador";
+    //     let filtered_list = window.filterData(list, "Marksman");
+    //     draw_champions(filtered_list);
+    // });
+    // document.getElementById('assassin').addEventListener('click', (evento) => {
+    //     evento.preventDefault();
+    //     clear_grid();
+    //     document.getElementById('categoria').textContent = "Asesino";
+    //     let filtered_list = window.filterData(list, "Assassin");
+    //     draw_champions(filtered_list);
+    // });
+    // document.getElementById('fighter').addEventListener('click', (evento) => {
+    //     evento.preventDefault();
+    //     clear_grid();
+    //     document.getElementById('categoria').textContent = "Guerrero";
+    //     let filtered_list = window.filterData(list, "Fighter");
+    //     draw_champions(filtered_list);
+    // });
 
 
 
@@ -97,14 +97,14 @@ window.onload = () => {
         }
     }
 
-    
+
 
     //funcion que recibe como parametro la lista de personaje y dibuja las tarjetas
     //de todos los personajes de la lista enviada
     function draw_champions(list) {
         const lista = document.getElementById('lista')
         let i = 0;
-        for (let champ in list) {   
+        for (let champ in list) {
             if (i % 5 === 0) {
                 if (i > 0) {
                     lista.appendChild(row);
@@ -164,7 +164,7 @@ window.onload = () => {
         div.appendChild(card);
         row.appendChild(div);
     }
-    function champion_profile(champion){
+    function champion_profile(champion) {
         document.getElementById('champ_name').innerHTML = champion.name;
         document.getElementById('champ_splash').src = champion.splash;
         document.getElementById('champ_title').innerHTML = champion.title;
@@ -213,7 +213,43 @@ window.onload = () => {
         row.appendChild(div);
 
     }
+    // var myPieChart = new Chart(ctx,{
+    //     type: 'pie',
+    //     data: data,
+    //     options: options
+    // });
 
-    
-    
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'polarArea',
+
+        // The data for our dataset
+        data: {
+            labels: ["Tanques", "Magos", "Apoyos", "Asesinos", "Tiradores", "Guerreros"],
+            datasets: [{
+                label: "My First dataset",
+                backgroundColor: ['#ac2e17', '#3c0090', '#66b6d1', '#c1a432', '#d0c430', 'white'], 
+                data: [5, 8, 5, 9, 2, 10],
+            }]
+        },
+
+        // Configuration options go here
+        options: {
+            responive
+        }
+    });
+
+
+
 }
+
+
+
+
+// var myPieChart = new Chart(ctx,{
+//     type: 'pie',
+//     data: data,
+//     options: options
+// });
+
