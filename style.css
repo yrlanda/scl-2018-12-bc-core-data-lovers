@@ -68,6 +68,8 @@ font-size: 10.5px;
     background-color: #b38f13; /* Add a dark-grey background on hover */
   }
 
-
-
+#myChart {
+    height: 20;
+    width: 20;
+}
 
