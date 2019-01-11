@@ -49,3 +49,68 @@ const filterData = (data, filt) => {
 
 }
 window.filterData = filterData;
+
+const computeStats = (data) => {
+  let stats = {
+    mage: 0,
+    tank: 0,
+    support: 0,
+    marksman: 0,
+    assassin: 0,
+    fighter: 0
+  }
+
+  let mage_dif = 0;
+  let mage_count = 0;
+  let tank_dif = 0;
+  let tank_count = 0;
+  let support_count = 0;
+  let support_dif = 0;
+  let assassin_dif = 0;
+  let assassin_count = 0;
+  let fighter_dif = 0;
+  let fighter_count = 0;
+  let marksman_dif = 0;
+  let marksman_count = 0;
+
+
+
+  Object.keys(data).sort().forEach(function (key) {
+
+    if (checkClass(data[key].tags, "Mage")) {
+      mage_dif += data[key].info.difficulty;
+      mage_count++
+    }
+    if (checkClass(data[key].tags, "Tank")) {
+      tank_dif += data[key].info.difficulty;
+      tank_count++
+    }
+    if (checkClass(data[key].tags, "Support")) {
+      support_dif += data[key].info.difficulty;
+      support_count++
+    }
+    if (checkClass(data[key].tags, "Assassin")) {
+      assassin_dif += data[key].info.difficulty;
+      assassin_count++
+    }
+    if (checkClass(data[key].tags, "Fighter")) {
+      fighter_dif += data[key].info.difficulty;
+      fighter_count++
+    }
+    if (checkClass(data[key].tags, "Marksman")) {
+      marksman_dif += data[key].info.difficulty;
+      marksman_count++
+    }
+  });
+
+  stats.mage = parseInt(mage_dif / mage_count);
+  stats.tank = parseInt(tank_dif / tank_count);
+  stats.support = parseInt(support_dif / support_count);
+  stats.assassin = parseInt(assassin_dif / assassin_count);
+  stats.fighter = parseInt(fighter_dif / fighter_count);
+  stats.marksman = parseInt(marksman_dif / marksman_count);
+
+  return stats;
+}
+
+window.computeStats = computeStats;
