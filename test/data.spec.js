@@ -12,23 +12,32 @@ describe('example', () => {
   });
 });
 
-describe('sortData', () =>{
-  it('Devuelve el primer campeon de la lista ordenada de la A la Z', () =>{
-     let sorted = Object.keys(window.sortData(window.LOL.data,1))
+describe('sortData', () => {
+  it('Devuelve el primer campeon de la lista ordenada de la A la Z', () => {
+    let sorted = Object.keys(window.sortData(window.LOL.data, 1))
     expect(sorted[0]).toBe('Aatrox');
 
   });
-  it('Devuelve el primer campeon de la lista ordenada de la Z la A', () =>{
-    let sorted = Object.keys(window.sortData(window.LOL.data,2))
-   expect(sorted[0]).toBe('Zyra');
+  it('Devuelve el primer campeon de la lista ordenada de la Z la A', () => {
+    let sorted = Object.keys(window.sortData(window.LOL.data, 2))
+    expect(sorted[0]).toBe('Zyra');
 
- });
+  });
 });
 
-describe('filterData', () =>{
-  it('Devuelve el primer Mago de la Lista', () =>{
-     let sorted = Object.keys(window.filterData(window.LOL.data,"Mage"));
+describe('filterData', () => {
+  it('Devuelve el primer Mago de la Lista', () => {
+    let sorted = Object.keys(window.filterData(window.LOL.data, "Mage"));
     expect(sorted[0]).toBe('Ahri');
+
+  });
+});
+
+describe('computeStats', () => {
+  it('Devuelve devuelve 6 para el promedio de los magos', () => {
+    let list = window.sortData(window.LOL.data, 1);
+    let stats = window.computeStats(list);
+    expect(stats.mage).toBe(6);
 
   });
 });
