@@ -20,6 +20,10 @@ function topFunction() {
 window.onload = () => {
     let list = window.sortData(window.LOL.data, 1);
     draw_champions(list);
+    let stats = window.computeStats(list);
+    console.log(stats);
+    
+
 
     document.getElementById('az').addEventListener('click', (evento) => {
         evento.preventDefault();
