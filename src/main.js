@@ -46,14 +46,19 @@ window.onload = () => {
     document.getElementById('mage').addEventListener('click', (evento) => {
         evento.preventDefault();
         clear_grid();
+<<<<<<< HEAD
+        document.getElementById('categoria').textContent = "Magos";
+        let filtered_list = window.filter(list, "Mage");
+=======
         document.getElementById('categoria').textContent = "Mago";
         let filtered_list = window.filterData(list, "Mage");
+>>>>>>> yrlanda/master
         draw_champions(filtered_list);
     });
 
     document.getElementById('tank').addEventListener('click', (evento) => {
         evento.preventDefault();
-        document.getElementById('categoria').textContent = "Tanque";
+        document.getElementById('categoria').textContent = "Tanques";
         clear_grid();
         let filtered_list = window.filterData(list, "Tank");
         draw_champions(filtered_list);
@@ -61,29 +66,49 @@ window.onload = () => {
     document.getElementById('support').addEventListener('click', (evento) => {
         evento.preventDefault();
         clear_grid();
+<<<<<<< HEAD
+        document.getElementById('categoria').textContent = "Apoyos";
+        let filtered_list = window.filter(list, "Support");
+=======
         document.getElementById('categoria').textContent = "Apoyo";
         let filtered_list = window.filterData(list, "Support");
+>>>>>>> yrlanda/master
         draw_champions(filtered_list);
     });
     document.getElementById('marksman').addEventListener('click', (evento) => {
         evento.preventDefault();
         clear_grid();
+<<<<<<< HEAD
+        document.getElementById('categoria').textContent = "Tiradores";
+        let filtered_list = window.filter(list, "Marksman");
+=======
         document.getElementById('categoria').textContent = "Tirador";
         let filtered_list = window.filterData(list, "Marksman");
+>>>>>>> yrlanda/master
         draw_champions(filtered_list);
     });
     document.getElementById('assassin').addEventListener('click', (evento) => {
         evento.preventDefault();
         clear_grid();
+<<<<<<< HEAD
+        document.getElementById('categoria').textContent = "Asesinos";
+        let filtered_list = window.filter(list, "Assassin");
+=======
         document.getElementById('categoria').textContent = "Asesino";
         let filtered_list = window.filterData(list, "Assassin");
+>>>>>>> yrlanda/master
         draw_champions(filtered_list);
     });
     document.getElementById('fighter').addEventListener('click', (evento) => {
         evento.preventDefault();
         clear_grid();
+<<<<<<< HEAD
+        document.getElementById('categoria').textContent = "Guerreros";
+        let filtered_list = window.filter(list, "Fighter");
+=======
         document.getElementById('categoria').textContent = "Guerrero";
         let filtered_list = window.filterData(list, "Fighter");
+>>>>>>> yrlanda/master
         draw_champions(filtered_list);
     });
 
