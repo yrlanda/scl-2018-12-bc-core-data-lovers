@@ -18,80 +18,77 @@ function topFunction() {
 }
 
 window.onload = () => {
-    let list = window.sortData(window.LOL.data, 1);
-    draw_champions(list);
-    let stats = window.computeStats(list);
-    console.log(stats);
-    
 
-
-    document.getElementById('az').addEventListener('click', (evento) => {
-        evento.preventDefault();
-        clear_grid();
+    if (document.getElementById('lista')) {
         let list = window.sortData(window.LOL.data, 1);
         draw_champions(list);
-    });
 
-    document.getElementById('za').addEventListener('click', (evento) => {
-        evento.preventDefault();
-        clear_grid();
-        let list = window.sortData(window.LOL.data, 2);
-        draw_champions(list);
-    });
+        document.getElementById('az').addEventListener('click', (evento) => {
+            evento.preventDefault();
+            clear_grid();
+            let list = window.sortData(window.LOL.data, 1);
+            draw_champions(list);
+        });
 
-    document.getElementById('all').addEventListener('click', (evento) => {
-        evento.preventDefault();
-        clear_grid();
-        document.getElementById('categoria').textContent = "Champions";
-        let list = window.sortData(window.LOL.data, 1);
-        draw_champions(list);
-    });
+        document.getElementById('za').addEventListener('click', (evento) => {
+            evento.preventDefault();
+            clear_grid();
+            let list = window.sortData(window.LOL.data, 2);
+            draw_champions(list);
+        });
 
-    document.getElementById('mage').addEventListener('click', (evento) => {
-        evento.preventDefault();
-        clear_grid();
-        document.getElementById('categoria').textContent = "Magos";
-        let filtered_list = window.filterData(list, "Mage");
-        draw_champions(filtered_list);
-    });
+        document.getElementById('all').addEventListener('click', (evento) => {
+            evento.preventDefault();
+            clear_grid();
+            document.getElementById('categoria').textContent = "Champions";
+            let list = window.sortData(window.LOL.data, 1);
+            draw_champions(list);
+        });
 
-    document.getElementById('tank').addEventListener('click', (evento) => {
-        evento.preventDefault();
-        document.getElementById('categoria').textContent = "Tanques";
-        clear_grid();
-        let filtered_list = window.filterData(list, "Tank");
-        draw_champions(filtered_list);
-    });
-    document.getElementById('support').addEventListener('click', (evento) => {
-        evento.preventDefault();
-        clear_grid();
-        document.getElementById('categoria').textContent = "Apoyos";
-        let filtered_list = window.filterData(list, "Support");
-        draw_champions(filtered_list);
-    });
-    document.getElementById('marksman').addEventListener('click', (evento) => {
-        evento.preventDefault();
-        clear_grid();
-        document.getElementById('categoria').textContent = "Tiradores";
-        let filtered_list = window.filterData(list, "Marksman");
-        draw_champions(filtered_list);
-    });
-    document.getElementById('assassin').addEventListener('click', (evento) => {
-        evento.preventDefault();
-        clear_grid();
-        document.getElementById('categoria').textContent = "Asesinos";
-        let filtered_list = window.filterData(list, "Assassin");
-        draw_champions(filtered_list);
-    });
-    document.getElementById('fighter').addEventListener('click', (evento) => {
-        evento.preventDefault();
-        clear_grid();
-        document.getElementById('categoria').textContent = "Guerreros";
-        let filtered_list = window.filterData(list, "Fighter");
-        draw_champions(filtered_list);
-    });
+        document.getElementById('mage').addEventListener('click', (evento) => {
+            evento.preventDefault();
+            clear_grid();
+            document.getElementById('categoria').textContent = "Magos";
+            let filtered_list = window.filterData(list, "Mage");
+            draw_champions(filtered_list);
+        });
 
-
+        document.getElementById('tank').addEventListener('click', (evento) => {
+            evento.preventDefault();
+            document.getElementById('categoria').textContent = "Tanques";
+            clear_grid();
+            let filtered_list = window.filterData(list, "Tank");
+            draw_champions(filtered_list);
+        });
+        document.getElementById('support').addEventListener('click', (evento) => {
+            evento.preventDefault();
+            clear_grid();
+            document.getElementById('categoria').textContent = "Apoyos";
+            let filtered_list = window.filterData(list, "Support");
+            draw_champions(filtered_list);
+        });
+        document.getElementById('marksman').addEventListener('click', (evento) => {
+            evento.preventDefault();
+            clear_grid();
+            document.getElementById('categoria').textContent = "Tiradores";
+            let filtered_list = window.filterData(list, "Marksman");
+            draw_champions(filtered_list);
+        });
+        document.getElementById('assassin').addEventListener('click', (evento) => {
+            evento.preventDefault();
+            clear_grid();
+            document.getElementById('categoria').textContent = "Asesinos";
+            let filtered_list = window.filterData(list, "Assassin");
+            draw_champions(filtered_list);
+        });
+        document.getElementById('fighter').addEventListener('click', (evento) => {
+            evento.preventDefault();
+            clear_grid();
+            document.getElementById('categoria').textContent = "Guerreros";
+            let filtered_list = window.filterData(list, "Fighter");
+            draw_champions(filtered_list);
+        });
+    }
 
     //Funcion que borra las tarjetas de personajes de la pantalla
     function clear_grid() {
@@ -217,43 +214,55 @@ window.onload = () => {
         row.appendChild(div);
 
     }
-    // var myPieChart = new Chart(ctx,{
-    //     type: 'pie',
-    //     data: data,
-    //     options: options
-    // });
 
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var chart = new Chart(ctx, {
-        // The type of chart we want to create
-        type: 'polarArea',
+    if (document.getElementById('myChart')) {
+        
+        let list = window.sortData(window.LOL.data, 1);
+        let stats = window.computeStats(list);
+        let div_chart = document.getElementById('myChart').getContext('2d');
+        new window.Chart(div_chart, {
+            // The type of chart we want to create
+            type: 'polarArea',
 
-        // The data for our dataset
-        data: {
-            labels: ["Tanques", "Magos", "Apoyos", "Asesinos", "Tiradores", "Guerreros"],
-            datasets: [{
-                label: "My First dataset",
-                backgroundColor: ['#ac2e17', '#3c0090', '#66b6d1', '#c1a432', '#d0c430', 'white'], 
-                data: [5, 8, 5, 9, 2, 10],
-            }]
-        },
+            borderColor: 'white',
 
-        // Configuration options go here
-        options: {
-            responive
-        }
-    });
+            // The data for our dataset
+            data: {
+                labels: ["Tanques", "Magos", "Apoyos", "Asesinos", "Tiradores", "Guerreros"],
+                datasets: [{
+                    label: "My First dataset",
+                    backgroundColor: ['#ac2e17', '#3c0090', '#66b6d1', '#c1a432', '#d0c430', 'white'],
+                    data: [stats.tank, stats.mage, stats.support, stats.assassin, stats.marksman, stats.fighter],
+                }]
+            },
 
 
+            // Configuration options go here
+            options: {
+                responsive: true,
+                legend: {
+                    position: 'left',
+                    labels: {
+                        // This more specific font property overrides the global property
+                        fontColor: 'white',
+                        fontSize: 14,
+                        fontFamily: 'Yatra One'
+                    }
+                },
+                title: {
+                    display: true,
+                    text: 'Dificultad promedio por Clase de Champions',
+                    fontColor: 'white',
+                    fontSize: 18,
+                    fontFamily: 'Yatra One'
+                },
+                
+                
+            }
+        });
 
-}
+    }
 
 
 
-
-// var myPieChart = new Chart(ctx,{
-//     type: 'pie',
-//     data: data,
-//     options: options
-// });
-
+}   
